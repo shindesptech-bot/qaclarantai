@@ -46,12 +46,12 @@ export default function Integrations() {
       <style>{`
         .int-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(40px, 6vw, 80px); align-items: center; }
         .int-eyebrow { font-family: var(--font-label); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
-        .int-h { font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.08; letter-spacing: -0.03em; color: var(--fg); margin-bottom: 18px; text-wrap: balance; }
+        .int-h { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 3.5vw, 2.875rem); line-height: 1.08; letter-spacing: -0.03em; color: var(--fg); margin-bottom: 18px; text-wrap: balance; }
         .int-lede { font-size: 17px; line-height: 1.7; color: var(--fg-muted); margin-bottom: 36px; max-width: 48ch; }
         .int-cats { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 20px; }
         .int-cat { display: grid; grid-template-columns: 170px 1fr; gap: 16px; align-items: center; padding-top: 18px; border-top: 1px solid var(--border); }
         @media (max-width: 480px) { .int-cat { grid-template-columns: 1fr; gap: 10px; } }
-        .int-cat-label { font-family: var(--font-display); font-weight: 600; font-size: 14.5px; color: var(--fg); }
+        .int-cat-label { font-family: var(--font-body); font-weight: 600; font-size: .9375rem; color: var(--fg); }
         .int-cat-tools { display: flex; gap: 10px; }
         .int-tile { width: 38px; height: 38px; border-radius: 10px; flex: none; display: inline-flex; align-items: center; justify-content: center; background: #FFFFFF; box-shadow: 0 4px 12px rgba(0,0,0,0.12); border: 1px solid var(--border); }
         .int-tile img { display: block; width: 56%; height: 56%; object-fit: contain; }

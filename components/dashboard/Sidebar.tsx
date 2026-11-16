@@ -289,8 +289,8 @@ export default function Sidebar({ role }: SidebarProps) {
           margin-bottom: 12px;
         }
         .sidebar-logo-link {
-          font-family: var(--font-display);
-          font-weight: 700;
+          font-family: var(--font-body);
+          font-weight: 600;
           font-size: 1rem;
           color: var(--fg);
           text-decoration: none;

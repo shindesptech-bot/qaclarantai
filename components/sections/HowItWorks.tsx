@@ -80,8 +80,8 @@ export default function HowItWorks() {
     <>
       <style>{`
         .how-h {
-          font-family: var(--font-display); font-weight: 700;
-          font-size: clamp(30px, 3.6vw, 46px); line-height: 1.08; letter-spacing: -0.03em;
+          font-family: var(--font-display); font-weight: 400;
+          font-size: clamp(2rem, 3.5vw, 2.875rem); line-height: 1.08; letter-spacing: -0.03em;
           color: var(--fg); margin-bottom: clamp(44px, 5vw, 64px);
         }
         .how-grid {
@@ -106,7 +106,7 @@ export default function HowItWorks() {
           animation: hw-travel 4s linear infinite;
         }
         .how-num { font-family: var(--font-label); font-size: 12.5px; font-weight: 600; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 6px; }
-        .how-title { font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--fg); margin-bottom: 10px; }
+        .how-title { font-family: var(--font-body); font-size: 1.3125rem; font-weight: 600; color: var(--fg); margin-bottom: 10px; }
         .how-text { font-size: 15px; line-height: 1.65; color: var(--fg-muted); }
 
         @keyframes hw-ring {

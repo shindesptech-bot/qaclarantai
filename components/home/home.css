@@ -38,17 +38,17 @@
   --shade: color-mix(in srgb, var(--fg) 30%, transparent);
   --shade-soft: color-mix(in srgb, var(--fg) 6%, transparent);
   --dots: radial-gradient(var(--tint-dot) 1.2px, transparent 1.4px);
-  /* type scale: the project's own steps (globals.css), grouped the way the reference uses them */
-  --t-display: clamp(36px, 4.6vw, 56px);
-  --t-h2: clamp(30px, 3.6vw, 46px);
-  --t-xl: var(--text-2xl);
-  --t-h3: var(--text-xl);
-  --t-lead: var(--text-lg);
-  --t-md: var(--text-lg);
-  --t-body: var(--text-base);
-  --t-small: var(--text-sm);
-  --t-micro: var(--text-xs);
-  --t-tiny: 11px;
+  /* type scale: mapped to reference values */
+  --t-display: clamp(2.5rem, 5.4vw, 4.5rem);
+  --t-h2: clamp(2rem, 3.5vw, 2.875rem);
+  --t-xl: clamp(1.5rem, 2.6vw, 2rem);
+  --t-h3: 1.375rem;
+  --t-lead: 1.25rem;
+  --t-md: 1.125rem;
+  --t-body: 1rem;
+  --t-small: .875rem;
+  --t-micro: .8125rem;
+  --t-tiny: .6875rem;
   /* space + shape */
   --pad: var(--gutter);
   --sec: clamp(56px, 6.6vw, 92px);
@@ -60,6 +60,8 @@
 }
 /* dark theme: the dark sections stay dark (the project's darkest neutral) */
 [data-theme="dark"] .clarant-home{--stage: var(--neutral-50)}
+/* light theme: the security section matches the page surface */
+:root:not([data-theme="dark"]) .clarant-home #security{--stage:var(--h-page);--stage-fg:var(--ink);--stage-2:var(--panel);--stage-line:var(--line);--stage-text:var(--ink-2);border-top-color:var(--line)}
 /* the homepage's sections set their own padding; the global section rule must not add to it */
 .clarant-home :where(section){padding:0}
 /* anchor targets clear the sticky header */
@@ -669,16 +671,16 @@
 /* the open mobile menu sits on a solid page colour, so the text underneath cannot show through */
 .clarant-home .mnav{background:var(--h-page)}
 
-/* ---------- connect strip: the integrations marquee under the hero (dark in both themes) ---------- */
-.clarant-home .connect{background:#18191E;color:#A0A3AD;border-bottom:1px solid #2A2C33;padding:22px var(--pad)}
+/* ---------- connect strip: the integrations marquee under the hero ---------- */
+.clarant-home .connect{background:var(--h-page);color:var(--ink-2);border-bottom:1px solid var(--line);padding:22px var(--pad)}
 .clarant-home .connect-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 32px;margin-bottom:18px}
-.clarant-home .connect-title{margin:0;font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#A0A3AD;line-height:1.4}
-.clarant-home .connect-note{margin:0;font-size:var(--text-base);line-height:1.4;color:#A0A3AD}
+.clarant-home .connect-title{margin:0;font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);line-height:1.4}
+.clarant-home .connect-note{margin:0;font-size:var(--text-base);line-height:1.4;color:var(--ink-2)}
 .clarant-home .connect-marquee{overflow-x:auto;overscroll-behavior-x:contain;touch-action:pan-x;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}
 .clarant-home .connect-marquee::-webkit-scrollbar{display:none}
 .clarant-home .connect-track{display:flex;width:max-content}
 .clarant-home .connect-group{display:flex;margin:0;padding:0;list-style:none}
-.clarant-home .connect-group li{display:flex;align-items:center;gap:10px;flex:none;margin:0;padding:0;margin-right:56px;white-space:nowrap;font-size:var(--text-base);font-weight:500;line-height:1;color:#A0A3AD}
+.clarant-home .connect-group li{display:flex;align-items:center;gap:10px;flex:none;margin:0;padding:0;margin-right:56px;white-space:nowrap;font-size:var(--text-base);font-weight:500;line-height:1;color:var(--ink-2)}
 .clarant-home .connect-group img{display:block;width:22px;height:22px;flex:none;object-fit:contain}
 /* desktop and wide tablet: one line that drifts; the second copy makes the loop seamless */
 @media (min-width:900px){

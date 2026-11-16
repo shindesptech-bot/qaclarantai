@@ -165,8 +165,8 @@ const CSS = `
   .sec-wrap { padding: clamp(48px,7vw,88px) 0 clamp(40px,6vw,72px); }
   .sec-header { max-width: 780px; margin: 0 auto clamp(36px,5vw,56px); text-align: center; }
   .sec-title {
-    font-family: var(--font-display); font-weight: 600;
-    font-size: clamp(34px,5vw,54px); line-height: 1.04;
+    font-family: var(--font-display); font-weight: 400;
+    font-size: clamp(2.5rem,5.4vw,4.5rem); line-height: 1.04;
     letter-spacing: -0.03em; margin: 14px 0 16px;
   }
   .sec-lede { color: var(--fg-muted); font-size: clamp(15.5px,1.6vw,18px); line-height: 1.6; margin: 0; text-wrap: pretty; }
@@ -192,8 +192,8 @@ const CSS = `
     font-size: 20px; margin-bottom: 4px;
   }
   .sec-card-title {
-    font-family: var(--font-display); font-weight: 600;
-    font-size: 18px; letter-spacing: -0.02em; color: var(--fg); margin: 0;
+    font-family: var(--font-body); font-weight: 600;
+    font-size: 1.125rem; letter-spacing: -0.02em; color: var(--fg); margin: 0;
   }
   .sec-card-body { color: var(--fg-muted); font-size: 14px; line-height: 1.6; margin: 0; }
   .sec-card-list { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; }
@@ -205,8 +205,8 @@ const CSS = `
     background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-lg);
   }
   .sec-contact-h {
-    font-family: var(--font-display); font-weight: 600;
-    font-size: 20px; letter-spacing: -0.02em; color: var(--fg); margin: 0 0 10px;
+    font-family: var(--font-body); font-weight: 600;
+    font-size: 1.25rem; letter-spacing: -0.02em; color: var(--fg); margin: 0 0 10px;
   }
   .sec-contact p { color: var(--fg-muted); font-size: 15px; line-height: 1.7; margin: 0; }
   .sec-link { color: var(--accent); text-decoration: none; }
