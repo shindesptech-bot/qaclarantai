@@ -18,21 +18,22 @@
   --panel: var(--bg-elevated);
   --panel-2: color-mix(in srgb, var(--fg) 2%, var(--bg-elevated));
   --sunk: var(--neutral-100);
-  --ink: var(--fg);
-  --ink-2: var(--fg-muted);
-  --ink-3: var(--fg-subtle);
+  /* Task 3: light-theme text colours taken from index.html (--black #0B0D0E). Dark theme restores
+     the project's --fg tokens below, so switching themes is unchanged. */
+  --ink: #0B0D0E;
+  --ink-2: color-mix(in srgb, #0B0D0E 74%, #FFFFFF);
+  --ink-3: color-mix(in srgb, #0B0D0E 64%, #FFFFFF);
   --line: color-mix(in srgb, var(--fg) 13%, var(--bg-elevated));
   --line-soft: color-mix(in srgb, var(--fg) 8%, var(--bg-elevated));
   --line-strong: color-mix(in srgb, var(--fg) 52%, var(--bg-elevated));
-  --brand-ink: var(--fg);
+  --brand-ink: color-mix(in srgb, var(--brand) 85%, #0B0D0E);
   --brand-tint: color-mix(in srgb, var(--accent) 16%, var(--bg-elevated));
   --brand-light: var(--accent);
-  /* dark sections ("It drafts", final CTA): the deep brand shade from the reference index.html, not near-black */
-  --stage: color-mix(in srgb, #0B6E99 40%, #0B0D0E);
+  --stage: var(--neutral-900);
   --stage-fg: #FFFFFF;
   --stage-2: color-mix(in srgb, #FFFFFF 8%, var(--stage));
   --stage-line: color-mix(in srgb, #FFFFFF 20%, var(--stage));
-  --stage-text: color-mix(in srgb, #FFFFFF 76%, #0B6E99);
+  --stage-text: color-mix(in srgb, #FFFFFF 76%, var(--stage));
   --tint: var(--neutral-50);
   --tint-dot: var(--neutral-300);
   --tint-line: var(--neutral-300);
@@ -60,9 +61,7 @@
   font-family: var(--font);
 }
 /* dark theme: the dark sections stay dark (the project's darkest neutral) */
-[data-theme="dark"] .clarant-home{--stage: var(--neutral-50)}
-/* light theme: the homepage's text colours from the reference index.html (ink #0B0D0E, ink-2 at 74%, ink-3 at 64% on white) */
-[data-theme="light"] .clarant-home{--fg:#0B0D0E;--fg-muted:color-mix(in srgb,#0B0D0E 74%,#FFFFFF);--fg-subtle:color-mix(in srgb,#0B0D0E 64%,#FFFFFF)}
+[data-theme="dark"] .clarant-home{--stage: var(--neutral-50);--ink: var(--fg);--ink-2: var(--fg-muted);--ink-3: var(--fg-subtle);--brand-ink: var(--fg)}
 /* the homepage's sections set their own padding; the global section rule must not add to it */
 .clarant-home :where(section){padding:0}
 /* anchor targets clear the sticky header */
@@ -164,8 +163,8 @@
 .clarant-home .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;margin-top:20px;font-size:var(--t-small);font-weight:500;color:var(--ink-2)}
 .clarant-home .trust li{display:inline-flex;align-items:center;gap:8px}
 .clarant-home .trust svg{color:var(--brand);flex-shrink:0}
-/* hero-stage background from the reference index.html: the deep brand shade with a white dot grid, an inset rounded panel */
-.clarant-home .hero-stage{--hs-stage:color-mix(in srgb,#0B6E99 40%,#0B0D0E);position:relative;height:700px;margin:0 var(--pad) var(--pad);border-radius:20px;background:var(--hs-stage) radial-gradient(color-mix(in srgb,#FFFFFF 20%,var(--hs-stage)) 1.1px,transparent 1.3px) 0 0/14px 14px;overflow:hidden;min-width:0}
+/* Task 1: right-side hero screen uses the reference's deep brand-shade stage with its dot grid (index.html .hero-stage). Scoped vars keep the global --stage (other dark sections) untouched. */
+.clarant-home .hero-stage{--hs-stage:color-mix(in srgb,var(--brand) 40%,#0B0D0E);--hs-stage-dot:color-mix(in srgb,#FFFFFF 20%,var(--hs-stage));position:relative;height:700px;border-top:1px solid var(--line);background:var(--hs-stage) radial-gradient(var(--hs-stage-dot) 1.1px,transparent 1.3px) 0 0/14px 14px;overflow:hidden;min-width:0}
 .clarant-home .hs{position:absolute;inset:0;display:flex;flex-direction:column}
 .clarant-home .hs-cap{flex:none;align-self:center;margin:22px 16px 0;padding:2px 10px;border-radius:var(--r-tag);background:var(--tint);font-size:var(--t-small);font-weight:600;line-height:1.4;color:var(--ink);text-align:center;text-wrap:balance;animation:ch-hs-pop .4s var(--ease)}
 .clarant-home .hs-cap b{font-weight:700}
@@ -280,7 +279,7 @@
 .clarant-home .hero .lead{margin-top:26px;text-wrap:pretty}
 .clarant-home .hero .actions, .clarant-home .hero .trust{justify-content:flex-start}
 .clarant-home .hero .trust{gap:8px 24px}
-.clarant-home .hero-stage{height:auto;min-height:646px;margin:24px 24px 24px 0}
+.clarant-home .hero-stage{height:auto;min-height:646px;border-top:0;border-left:1px solid var(--line)}
 }
 .clarant-home .ui-btn{display:inline-flex;align-items:center;border-radius:var(--r-tag);padding:6px 12px;font-size:var(--t-micro);font-weight:600;white-space:nowrap;background:var(--sunk);color:var(--ink)}
 .clarant-home .ui-btn.go{background:var(--brand);color:var(--white)}
@@ -472,11 +471,6 @@
 .clarant-home .cmp .us{background:var(--brand-tint);color:var(--ink);font-weight:500}
 .clarant-home .cmp thead .us{font-weight:600;color:var(--brand-ink)}
 .clarant-home .sec.dark{border-top-color:var(--stage)}
-/* Requested: in light theme, all text in #security ("It drafts" + trust facts) and #trial (final CTA) is white.
-   Covers headings (a global h* rule otherwise forces them to --fg), supporting text (lead/small/micro) and the
-   draft label. Scoped to [data-theme="light"]; backgrounds, buttons and the draft tag keep their own colors. */
-[data-theme="light"] .clarant-home #security :is(h2, h3, .lead, .small, .micro, .meta),
-[data-theme="light"] .clarant-home #trial :is(h2, h3, .lead, .small, .micro){color:#FFFFFF}
 .clarant-home .approve{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px 64px;align-items:center}
 .clarant-home .approve .lead{margin-top:20px;font-size:var(--t-md);line-height:1.6}
 .clarant-home .msg{background:var(--stage-2);border:1px solid var(--stage-line);border-radius:var(--r-win);padding:24px}
@@ -514,8 +508,8 @@
 .clarant-home .plans li svg{flex-shrink:0;margin-top:4px;color:var(--brand)}
 .clarant-home .plans .btn{margin-top:auto}
 .clarant-home .plans .small{margin-top:6px}
-@supports (grid-template-rows:subgrid){.clarant-home .plans{grid-template-rows:auto auto 1fr auto}
-.clarant-home .plans > *{display:grid;grid-row:span 4;grid-template-rows:subgrid}
+@supports (grid-template-rows:subgrid){.clarant-home .plans{grid-template-rows:auto auto 1fr auto auto}
+.clarant-home .plans > *{display:grid;grid-row:span 5;grid-template-rows:subgrid}
 }
 .clarant-home .faq{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 64px;align-items:start}
 .clarant-home .faq .lead{margin-top:16px;font-size:var(--t-md)}
@@ -635,26 +629,40 @@
 }
 
 /* ---------- homepage additions to the reference styles (presentation only) ---------- */
+/* pricing: three plans recreated from pricing.html (Free / Pro / Enterprise) */
+.clarant-home .plans{grid-template-columns:repeat(3,minmax(0,1fr))}
+.clarant-home .plans > *{padding-inline:clamp(20px,2.4vw,32px)}
+.clarant-home .plans > *:first-child{padding-left:var(--pad)}
+.clarant-home .plans > *:last-child{padding-right:var(--pad)}
+.clarant-home .plans .btn{align-self:flex-start}
+.clarant-home .home-soon{font-size:var(--t-lead);color:var(--ink-2)}
+.clarant-home .home-pricing-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;margin-bottom:36px}
+.clarant-home .home-pricing-top .small{margin:0}
 .clarant-home .fbase a{color:inherit;text-decoration:none}
 .clarant-home .fbase a:hover{color:var(--ink);text-decoration:underline}
-/* pricing: the three plans from the reference pricing.html (its PRICING PAGE plan rules) */
-.clarant-home .p-plans{padding-top:0;padding-bottom:0;border-top:0}
-.clarant-home .p-plans .plans{margin-bottom:0;border-bottom:1px solid var(--line)}
+.clarant-home .plans .price{font-size:var(--t-xl)}
+.clarant-home .plans .price small{font-size:var(--t-micro)}
+.clarant-home .plans ul b{font-weight:600}
+.clarant-home .plans li{align-items:flex-start}
+.clarant-home .plans li svg{margin-top:3px}
+/* Task 2: pricing-card treatment from pricing.html (Pro = pick, display-font price, per-line and fine print) */
 .clarant-home .plans .pick{background:color-mix(in srgb,var(--brand) 4%,var(--white));box-shadow:inset 0 3px 0 var(--brand)}
 .clarant-home .plans .h3{display:flex;align-items:center;gap:10px}
 .clarant-home .plans .price{font-size:var(--t-h2);font-family:var(--font-display);letter-spacing:var(--track-display)}
-.clarant-home .plans .price small{font-family:var(--font)}
+.clarant-home .plans .price small{font-family:var(--font);font-size:var(--t-small)}
 .clarant-home .plans .per{display:block;margin-top:10px;line-height:1.45;font-family:var(--font);font-size:var(--t-small);letter-spacing:0;color:var(--ink-2)}
-.clarant-home .plans li b{font-weight:600}
 .clarant-home .plans .fine{font-size:var(--t-micro);color:var(--ink-3);margin-top:-8px}
 .clarant-home .plans .fine a{color:var(--ink-2)}
-@supports (grid-template-rows:subgrid){
-  .clarant-home .plans{grid-template-rows:auto auto 1fr auto auto}
-  .clarant-home .plans > *{grid-row:span 5}
-}
+.clarant-home .home-billing{display:inline-flex;align-items:center;gap:4px;padding:4px;margin:0;border:1px solid var(--line);border-radius:999px;background:var(--panel)}
+.clarant-home .home-billing button{min-height:36px;padding:0 16px;border:0;border-radius:999px;background:transparent;color:var(--ink-2);font:600 var(--t-small)/1 var(--font);cursor:pointer;transition:background-color .18s var(--ease),color .18s var(--ease)}
+.clarant-home .home-billing button:hover{color:var(--ink)}
+.clarant-home .home-billing button.is-on{background:var(--ink);color:var(--white)}
+.clarant-home .home-billing button:focus-visible{outline-offset:2px}
+/* three plans hold to one row to 900px (as the reference .c3 does), then stack */
 @media (max-width:900px){
-  .clarant-home .p-plans .plans{margin-inline:calc(var(--pad) * -1)}
-  .clarant-home .plans .fine{margin-top:-4px}
+  .clarant-home .plans{grid-template-columns:1fr;grid-template-rows:none}
+  .clarant-home .plans > *{display:flex;flex-direction:column;grid-row:auto;grid-template-rows:none;gap:20px;border-left:0;padding-inline:var(--pad)}
+  .clarant-home .plans > *:nth-child(n+2){border-top:1px solid var(--line)}
 }
 /* footer: the reference's three link columns hold on tablet, and stack on phones */
 @media (max-width:900px){
@@ -667,23 +675,29 @@
 /* the open mobile menu sits on a solid page colour, so the text underneath cannot show through */
 .clarant-home .mnav{background:var(--h-page)}
 
-/* ---------- proof strip: "Trusted by business leaders" row under the hero, from the reference index.html ---------- */
-.clarant-home .proof-strip{border-top:1px solid var(--line);padding:clamp(36px,4vw,52px) var(--pad);display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center}
-.clarant-home .proof-strip h2{font-family:var(--font-display);font-size:var(--t-xl);font-weight:400;line-height:1.2;letter-spacing:var(--track-display);text-wrap:balance}
-.clarant-home .proof-strip h2 b{font-weight:400;color:var(--brand)}
-/* logos move right-to-left as a seamless infinite marquee: the track holds two identical groups and
-   slides by exactly one group (-50%), so the loop has no visible gap. Clipped to the section, no overflow. */
-.clarant-home .logos{width:100%;overflow:hidden}
-.clarant-home .logos-track{display:flex;width:max-content;animation:proof-scroll 32s linear infinite}
-.clarant-home .logos-group{display:flex;align-items:center;flex:none;margin:0;padding:0;list-style:none}
-/* each group: logo on the left, name immediately to its right, both vertically centred; even gaps between groups */
-.clarant-home .logos-group li{flex:none;display:flex;align-items:center;gap:9px;height:36px;margin-right:clamp(32px,5vw,56px);white-space:nowrap}
-.clarant-home .logos-group li span{font-size:var(--t-small);font-weight:500;color:var(--ink-2)}
-.clarant-home .logos img{max-height:30px;max-width:132px;width:auto;object-fit:contain}
-@keyframes proof-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* reduced motion: stop the auto-scroll and let the row scroll by hand instead */
-@media (prefers-reduced-motion:reduce){
-  .clarant-home .logos{overflow-x:auto;scrollbar-width:none}
-  .clarant-home .logos::-webkit-scrollbar{display:none}
-  .clarant-home .logos-track{animation:none}
+/* ---------- connect strip: the integrations marquee under the hero (dark in both themes) ---------- */
+.clarant-home .connect{background:#18191E;color:#A0A3AD;border-bottom:1px solid #2A2C33;padding:22px var(--pad)}
+.clarant-home .connect-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 32px;margin-bottom:18px}
+.clarant-home .connect-title{margin:0;font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#A0A3AD;line-height:1.4}
+.clarant-home .connect-note{margin:0;font-size:var(--text-base);line-height:1.4;color:#A0A3AD}
+.clarant-home .connect-marquee{overflow-x:auto;overscroll-behavior-x:contain;touch-action:pan-x;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}
+.clarant-home .connect-marquee::-webkit-scrollbar{display:none}
+.clarant-home .connect-track{display:flex;width:max-content}
+.clarant-home .connect-group{display:flex;margin:0;padding:0;list-style:none}
+.clarant-home .connect-group li{display:flex;align-items:center;gap:10px;flex:none;margin:0;padding:0;margin-right:56px;white-space:nowrap;font-size:var(--text-base);font-weight:500;line-height:1;color:#A0A3AD}
+.clarant-home .connect-group img{display:block;width:22px;height:22px;flex:none;object-fit:contain}
+/* desktop and wide tablet: one line that drifts; the second copy makes the loop seamless */
+@media (min-width:900px){
+  .clarant-home .connect-dup{display:flex}
 }
+@media (max-width:899px){
+  .clarant-home .connect-dup{display:none}
+  .clarant-home .connect-head{flex-direction:column;align-items:flex-start}
+  .clarant-home .connect-group li{margin-right:40px}
+}
+@media (min-width:900px) and (prefers-reduced-motion:no-preference){
+  .clarant-home .connect-marquee{overflow:hidden}
+  .clarant-home .connect-track{animation:connect-scroll 40s linear infinite}
+  .clarant-home .connect-marquee:hover .connect-track{animation-play-state:paused}
+}
+@keyframes connect-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
