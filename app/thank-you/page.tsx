@@ -110,8 +110,8 @@ const CSS = `
   .ty-header { margin: 0 auto clamp(32px,5vw,52px); }
   .ty-header .eyebrow { justify-content: center; }
   .ty-title {
-    font-family: var(--font-display); font-weight: 400;
-    font-size: clamp(2.5rem,5.4vw,4.5rem); line-height: 1.05;
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(32px,5vw,52px); line-height: 1.05;
     letter-spacing: -0.03em; margin: 14px 0 18px;
   }
   .ty-lede { color: var(--fg-muted); font-size: clamp(15.5px,1.6vw,18px); line-height: 1.6; margin: 0 auto; text-wrap: pretty; }
@@ -124,8 +124,8 @@ const CSS = `
 
   .ty-next { max-width: 620px; margin: 0 auto; text-align: left; }
   .ty-next-h {
-    font-family: var(--font-body); font-weight: 600;
-    font-size: 1.375rem; letter-spacing: -0.02em;
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(22px,3vw,28px); letter-spacing: -0.02em;
     text-align: center; margin: 0 0 clamp(20px,3vw,28px);
   }
   .ty-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
@@ -138,14 +138,14 @@ const CSS = `
     flex: none; width: 36px; height: 36px; border-radius: 50%;
     display: inline-flex; align-items: center; justify-content: center;
     background: var(--accent); color: var(--accent-fg);
-    font-family: var(--font-body); font-weight: 600; font-size: 1rem;
+    font-family: var(--font-display); font-weight: 600; font-size: 16px;
   }
-  .ty-step-title { font-family: var(--font-body); font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.01em; margin: 4px 0 6px; }
+  .ty-step-title { font-family: var(--font-display); font-weight: 600; font-size: 16.5px; letter-spacing: -0.01em; margin: 4px 0 6px; }
   .ty-step-body { color: var(--fg-muted); font-size: 14.5px; line-height: 1.55; margin: 0; }
 
   .ty-outro {
-    font-family: var(--font-body); font-weight: 600;
-    font-size: clamp(1.0625rem,2vw,1.25rem); letter-spacing: -0.01em;
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(17px,2vw,20px); letter-spacing: -0.01em;
     margin: clamp(32px,5vw,48px) auto clamp(22px,3vw,30px);
   }
 

@@ -38,7 +38,7 @@ export default function StatsCard({ title, value, description, accent }: StatsCa
           font-size: 2rem;
           font-weight: 700;
           color: var(--fg);
-          font-family: var(--font-body);
+          font-family: var(--font-display);
           line-height: 1;
           margin-bottom: 4px;
         }

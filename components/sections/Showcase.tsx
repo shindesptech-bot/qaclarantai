@@ -50,8 +50,8 @@ export default function Showcase() {
           letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
         }
         .pro-h {
-          font-family: var(--font-display); font-weight: 400;
-          font-size: clamp(2rem, 3.5vw, 2.875rem); line-height: 1.04;
+          font-family: var(--font-display); font-weight: 700;
+          font-size: clamp(30px, 3.6vw, 46px); line-height: 1.04;
           letter-spacing: -0.035em; color: var(--fg); margin-bottom: 28px; text-wrap: balance;
         }
         .pro-lede { font-size: clamp(16px, 1.45vw, 18px); line-height: 1.7; color: var(--fg-muted); max-width: 48ch; text-wrap: pretty; }

@@ -13,7 +13,7 @@ export default function Pricing() {
         .pricing-head { text-align: center; margin-bottom: 56px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
         .pricing-head .section-lede { margin-left: auto; margin-right: auto; }
         .billing-toggle { display: inline-flex; padding: 4px; border-radius: 9999px; border: 1px solid var(--border); background: var(--bg-elevated); margin-top: 24px; }
-        .bt { background: transparent; border: 0; padding: 9px 16px; border-radius: 9999px; font-family: var(--font-body); font-weight: 500; font-size: .8125rem; color: var(--fg-muted); display: inline-flex; align-items: center; gap: 8px; }
+        .bt { background: transparent; border: 0; padding: 9px 16px; border-radius: 9999px; font-family: var(--font-display); font-weight: 500; font-size: 13px; color: var(--fg-muted); display: inline-flex; align-items: center; gap: 8px; }
         .bt.is-active { background: var(--fg); color: var(--bg); }
         .bt-save { font-size: 10.5px; padding: 2px 6px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
         .bt.is-active .bt-save { background: var(--accent); color: var(--accent-fg); }
@@ -41,15 +41,15 @@ export default function Pricing() {
           position: absolute; top: -12px; left: 28px;
           padding: 5px 10px; border-radius: 9999px;
           background: var(--accent); color: var(--accent-fg);
-          font-family: var(--font-body); font-weight: 600; font-size: .75rem; letter-spacing: .03em;
+          font-family: var(--font-display); font-weight: 600; font-size: 11.5px; letter-spacing: .03em;
         }
-        .tier-name { font-family: var(--font-body); font-weight: 600; font-size: 1.375rem; letter-spacing: -0.02em; transition: color .2s; }
+        .tier-name { font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: -0.02em; transition: color .2s; }
         .tier:hover .tier-name { color: var(--accent); }
         .tier-tag { color: var(--fg-muted); font-size: 13.5px; }
         .tier-price { display: flex; align-items: baseline; gap: 4px; margin-top: 18px; }
         @keyframes priceHop { 0%,100%{transform:translateY(0)} 40%{transform:translateY(-4px)} }
         .tier-price-num {
-          font-family: var(--font-display); font-weight: 400; font-size: 3rem; letter-spacing: -0.03em;
+          font-family: var(--font-display); font-weight: 600; font-size: 48px; letter-spacing: -0.03em;
           color: var(--accent); display: inline-block;
         }
         .tier:hover .tier-price-num { animation: priceHop .45s var(--ease); }
@@ -84,10 +84,10 @@ export default function Pricing() {
           padding: 5px 10px; border-radius: 9999px;
           background: var(--bg-elevated); color: var(--fg-muted);
           border: 1px solid var(--border);
-          font-family: var(--font-body); font-weight: 600; font-size: .75rem; letter-spacing: .03em;
+          font-family: var(--font-display); font-weight: 600; font-size: 11.5px; letter-spacing: .03em;
         }
         .tier-price-soon {
-          font-family: var(--font-body); font-weight: 600; font-size: 1.875rem; letter-spacing: -0.02em;
+          font-family: var(--font-display); font-weight: 600; font-size: 30px; letter-spacing: -0.02em;
           color: var(--fg-muted);
         }
         .tier-cta.is-disabled { cursor: not-allowed; opacity: 0.6; pointer-events: none; }

@@ -63,8 +63,8 @@ export default function UnifiedSearch() {
       <style>{`
         .plat-head { max-width: 720px; margin-bottom: clamp(44px, 5vw, 64px); }
         .plat-h {
-          font-family: var(--font-display); font-weight: 400;
-          font-size: clamp(2rem, 3.5vw, 2.875rem); line-height: 1.08;
+          font-family: var(--font-display); font-weight: 700;
+          font-size: clamp(30px, 3.6vw, 46px); line-height: 1.08;
           letter-spacing: -0.03em; color: var(--fg); margin-bottom: 18px; text-wrap: balance;
         }
         .plat-lede { font-size: 17px; line-height: 1.7; color: var(--fg-muted); }
@@ -84,7 +84,7 @@ export default function UnifiedSearch() {
           background: color-mix(in oklab, var(--accent) 8%, transparent);
         }
         .plat-col-title {
-          font-family: var(--font-body); font-size: 1.1875rem; font-weight: 600;
+          font-family: var(--font-display); font-size: 19px; font-weight: 600;
           line-height: 1.3; color: var(--fg); margin-bottom: 10px;
         }
         .plat-col-desc { font-size: 15px; line-height: 1.65; color: var(--fg-muted); }

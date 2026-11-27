@@ -23,8 +23,8 @@
 .blog-hero-inner { position: relative; z-index: 1; }
 .blog-hero-title {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(2.5rem, 5.4vw, 4.5rem);
+  font-weight: 600;
+  font-size: clamp(44px, 6vw, 88px);
   line-height: .98;
   letter-spacing: -0.035em;
   margin: 14px 0 18px;
@@ -33,7 +33,7 @@
 }
 .blog-hero-title em { font-style: normal; color: var(--accent); }
 .blog-hero-lede {
-  font-size: 1.25rem;
+  font-size: clamp(16px, 1.4vw, 19px);
   line-height: 1.55;
   color: var(--fg-muted);
   max-width: 56ch;
@@ -175,8 +175,8 @@
   content: ""; width: 18px; height: 1px; background: currentColor;
 }
 .featured-title {
-  font-family: var(--font-display); font-weight: 400;
-  font-size: clamp(2rem, 3.5vw, 2.875rem);
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(28px, 3.4vw, 48px);
   line-height: 1.04; letter-spacing: -0.025em;
   margin: 14px 0 14px;
   text-wrap: balance;
@@ -196,8 +196,8 @@
   width: 36px; height: 36px; border-radius: 50%;
   background: linear-gradient(135deg, oklch(72% 0.08 250), oklch(60% 0.12 280));
   display: inline-flex; align-items: center; justify-content: center;
-  color: #fff; font-family: var(--font-body); font-weight: 600;
-  font-size: .8125rem;
+  color: #fff; font-family: var(--font-display); font-weight: 600;
+  font-size: 13px;
   flex-shrink: 0;
 }
 .byline-name { color: var(--fg); font-weight: 500; }
@@ -326,9 +326,9 @@
   color: var(--accent);
 }
 .post-card-title {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.02em;
   text-wrap: balance;
@@ -370,9 +370,9 @@
   padding: 22px;
 }
 .side-h {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: .875rem;
+  font-size: 14px;
   letter-spacing: -0.005em;
   margin: 0 0 14px;
 }
@@ -416,8 +416,8 @@
   padding: 22px;
 }
 .side-newsletter h3 {
-  font-family: var(--font-body);
-  font-size: 1.125rem;
+  font-family: var(--font-display);
+  font-size: 18px;
   font-weight: 600;
   margin: 0 0 6px;
   letter-spacing: -0.02em;
@@ -461,9 +461,9 @@
 }
 .topic:hover { border-color: var(--neutral-400); transform: translateY(-1px); opacity: 1; }
 .topic-h {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
   letter-spacing: -0.01em;
 }
 .topic-c {
@@ -561,8 +561,8 @@
 }
 .post2-category::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 .post2-title {
-  font-family: var(--font-display); font-weight: 400;
-  font-size: clamp(2.5rem, 5.4vw, 4.5rem);
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(36px, 5.4vw, 72px);
   line-height: 1.02;
   letter-spacing: -0.035em;
   text-wrap: balance;
@@ -732,8 +732,8 @@
 .post2-body .prose2 h1 { display: none; }
 .prose2 h2 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 2.6vw, 2.875rem);
-  font-weight: 400;
+  font-size: clamp(26px, 2.6vw, 34px);
+  font-weight: 600;
   letter-spacing: -0.02em;
   margin-top: 30px;
   scroll-margin-top: 100px;
@@ -747,8 +747,8 @@
   margin-bottom: 18px;
 }
 .prose2 h3 {
-  font-family: var(--font-body);
-  font-size: 1.375rem;
+  font-family: var(--font-display);
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: -0.015em;
   margin-top: 40px;
@@ -892,8 +892,8 @@
   display: inline-flex; align-items: center; gap: 8px;
 }
 .takeaways h3 {
-  font-family: var(--font-body);
-  font-size: 1.375rem;
+  font-family: var(--font-display);
+  font-size: 22px;
   font-weight: 600;
   margin: 0 0 14px;
   letter-spacing: -0.015em;
@@ -924,8 +924,8 @@
 }
 .stat-num {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 2.25rem;
+  font-weight: 600;
+  font-size: 36px;
   letter-spacing: -0.025em;
   line-height: 1;
   color: var(--accent);
@@ -954,9 +954,9 @@
 }
 @media (max-width: 640px) { .inline-cta { grid-template-columns: 1fr; } }
 .inline-cta h3 {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.375rem;
+  font-size: 22px;
   letter-spacing: -0.015em;
   margin: 0 0 6px;
 }
@@ -969,8 +969,8 @@
   border-top: 1px solid var(--accent);
   border-bottom: 1px solid var(--accent);
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  font-weight: 400;
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--fg);
@@ -1019,9 +1019,9 @@
   background: var(--bg-elevated);
 }
 .feedback-q {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 15px;
 }
 .feedback-actions { display: flex; gap: 8px; }
 .fb-btn {
@@ -1059,12 +1059,12 @@
   width: 80px; height: 80px; border-radius: 50%;
   background: linear-gradient(135deg, oklch(72% 0.08 250), oklch(60% 0.12 280));
   display: inline-flex; align-items: center; justify-content: center;
-  color: #fff; font-family: var(--font-body); font-weight: 600;
-  font-size: 1.75rem;
+  color: #fff; font-family: var(--font-display); font-weight: 600;
+  font-size: 28px;
 }
 .author-foot .author-info h4 {
-  font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 20px;
   font-weight: 600;
   margin: 0 0 4px;
   letter-spacing: -0.015em;
@@ -1093,8 +1093,8 @@
 }
 .post2-faq-h {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 2.6vw, 2.875rem);
-  font-weight: 400;
+  font-size: clamp(26px, 2.6vw, 32px);
+  font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0 0 28px;
 }
@@ -1107,9 +1107,9 @@
   padding: 22px 0;
   display: flex; align-items: center; justify-content: space-between;
   gap: 16px;
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.0625rem;
+  font-size: 17px;
   letter-spacing: -0.01em;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
@@ -1151,7 +1151,7 @@
 }
 .inline-news h3 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 2.6vw, 2.875rem); font-weight: 400;
+  font-size: 26px; font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0 0 8px;
 }
@@ -1229,8 +1229,8 @@
 .post-nav-card.is-prev:hover .post-nav-arrow { transform: translateX(-3px); }
 .post-nav-card.is-next:hover .post-nav-arrow { transform: translateX(3px); }
 .post-nav-title {
-  font-family: var(--font-body);
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.01em;

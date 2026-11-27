@@ -55,7 +55,7 @@ export default function BlogError({
           color: var(--fg-muted, #666);
         }
         .blog-error svg { color: #dc2626; }
-        .blog-error-title { font-size: 1.4rem; font-weight: 700; color: var(--fg, #111); margin: 4px 0 0; }
+        .blog-error-title { font-size: 1.4rem; font-weight: 600; color: var(--fg, #111); margin: 4px 0 0; }
         .blog-error-text { font-size: 0.95rem; line-height: 1.55; margin: 0; }
         .blog-error-actions { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; justify-content: center; }
       `}</style>

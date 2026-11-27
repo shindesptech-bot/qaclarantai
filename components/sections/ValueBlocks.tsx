@@ -89,11 +89,11 @@ export default function ValueBlocks() {
           gap: clamp(48px, 7vw, 104px); align-items: center;
         }
         .vb-eyebrow { font-family: var(--font-label); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
-        .vb-h { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 3.5vw, 2.875rem); line-height: 1.08; letter-spacing: -0.03em; color: var(--fg); margin-bottom: 16px; text-wrap: balance; }
-        .vb-sub { font-family: var(--font-body); font-size: 1.125rem; font-weight: 500; line-height: 1.4; color: var(--accent); margin-bottom: 28px; }
+        .vb-h { font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.08; letter-spacing: -0.03em; color: var(--fg); margin-bottom: 16px; text-wrap: balance; }
+        .vb-sub { font-family: var(--font-display); font-size: 18px; font-weight: 500; line-height: 1.4; color: var(--accent); margin-bottom: 28px; }
         .vb-body { display: flex; flex-direction: column; gap: 20px; }
         .vb-body p { font-size: 16px; line-height: 1.7; color: var(--fg-muted); margin: 0; text-wrap: pretty; }
-        .vb-body p.is-lead { font-family: var(--font-body); font-size: 1.1875rem; line-height: 1.55; color: var(--fg); font-weight: 500; }
+        .vb-body p.is-lead { font-family: var(--font-display); font-size: 19px; line-height: 1.55; color: var(--fg); font-weight: 500; }
 
         /* framed visual: offset accent border behind a 4:3 rounded card */
         .vb-frame { position: relative; width: 100%; max-width: 560px; margin: 0 auto; padding: 0 clamp(10px, 2vw, 16px) clamp(10px, 2vw, 16px) 0; }

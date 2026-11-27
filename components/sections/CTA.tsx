@@ -21,7 +21,7 @@ export default function CTA() {
           animation: ctaGlow 5s ease-in-out infinite;
         }
         .cta-inner { position: relative; max-width: 720px; }
-        .cta-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.5rem, 5.4vw, 4.5rem); line-height: 1; letter-spacing: -0.03em; }
+        .cta-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -0.03em; }
         .cta-lede { color: var(--fg-muted); font-size: clamp(16px, 1.3vw, 18px); margin-top: 16px; max-width: 540px; line-height: 1.55; }
         .cta-actions { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
         .cta-foot { margin-top: 14px; font-size: 13px; }
