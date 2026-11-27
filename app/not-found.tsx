@@ -51,15 +51,15 @@ const CSS = `
     display: flex; flex-direction: column; align-items: center;
   }
   .nf-code {
-    font-family: var(--font-display); font-weight: 400;
-    font-size: clamp(4.5rem,16vw,8.75rem); line-height: 1;
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(72px,16vw,140px); line-height: 1;
     letter-spacing: -0.04em;
     background: linear-gradient(180deg, var(--accent), color-mix(in oklab, var(--accent) 40%, transparent));
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
   .nf-title {
-    font-family: var(--font-display); font-weight: 400;
-    font-size: clamp(2rem,4vw,2.5rem); letter-spacing: -0.025em;
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(26px,4vw,40px); letter-spacing: -0.025em;
     margin: 12px 0 12px;
   }
   .nf-text { color: var(--fg-muted); font-size: 16px; line-height: 1.6; margin: 0 0 28px; text-wrap: pretty; }

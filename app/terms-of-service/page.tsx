@@ -236,8 +236,8 @@ const CSS = `
   .tos-wrap { padding: clamp(48px,7vw,88px) 0 clamp(56px,8vw,96px); }
   .tos-header { max-width: 760px; margin: 0 auto clamp(28px,4vw,44px); }
   .tos-title {
-    font-family: var(--font-display); font-weight: 400;
-    font-size: clamp(2.5rem,5.4vw,4.5rem); line-height: 1.04;
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(34px,5vw,52px); line-height: 1.04;
     letter-spacing: -0.03em; margin: 14px 0 10px;
   }
   .tos-updated { color: var(--fg-subtle); font-size: 13.5px; margin: 0; }
@@ -255,13 +255,13 @@ const CSS = `
   .tos-article strong { color: var(--fg); font-weight: 600; }
 
   .tos-h2 {
-    font-family: var(--font-display); font-weight: 400;
-    font-size: clamp(1.25rem,2.4vw,1.625rem); letter-spacing: -0.02em;
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(20px,2.4vw,26px); letter-spacing: -0.02em;
     color: var(--fg); margin: 36px 0 12px; scroll-margin-top: 88px;
   }
   .tos-h3 {
-    font-family: var(--font-body); font-weight: 600;
-    font-size: 1.0625rem; letter-spacing: -0.01em;
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 16.5px; letter-spacing: -0.01em;
     color: var(--fg); margin: 22px 0 8px;
   }
 

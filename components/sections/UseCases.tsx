@@ -397,8 +397,8 @@ export default function UseCases({ showHead = true }: { showHead?: boolean }) {
         /* ── Body ── */
         .uc-body { display: flex; flex-direction: column; gap: 10px; flex: 1; padding: 4px 8px 8px; }
         .uc-title {
-          font-family: var(--font-body); font-weight: 600;
-          font-size: 1.25rem; letter-spacing: -0.02em; line-height: 1.2; margin: 0;
+          font-family: var(--font-display); font-weight: 600;
+          font-size: 20px; letter-spacing: -0.02em; line-height: 1.2; margin: 0;
         }
         .uc-desc {
           color: var(--fg-muted); font-size: 14px; line-height: 1.6; margin: 0; flex: 1;
@@ -411,7 +411,7 @@ export default function UseCases({ showHead = true }: { showHead?: boolean }) {
           align-self: flex-start; margin-top: 6px;
           display: inline-flex; align-items: center; gap: 8px;
           padding: 10px 16px; border-radius: var(--radius-pill);
-          font-family: var(--font-body); font-weight: 600; font-size: .875rem;
+          font-family: var(--font-display); font-weight: 600; font-size: 13.5px;
           color: var(--accent);
           background: var(--accent-soft);
           border: 1px solid color-mix(in oklab, var(--accent) 28%, transparent);

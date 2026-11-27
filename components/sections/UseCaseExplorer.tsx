@@ -183,7 +183,7 @@ export default function UseCaseExplorer() {
           transition: color var(--dur) var(--ease);
         }
         .cc-item-title {
-          font-family: var(--font-body); font-size: .9375rem; font-weight: 500;
+          font-family: var(--font-display); font-size: 14.5px; font-weight: 500;
           color: var(--fg); line-height: 1.25;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
@@ -239,8 +239,8 @@ export default function UseCaseExplorer() {
           letter-spacing: .1em; text-transform: uppercase; color: var(--accent);
         }
         .cc-preview-title {
-          margin: 8px 0 0; font-family: var(--font-display); font-weight: 400;
-          font-size: clamp(1.5rem, 3.4vw, 2.125rem); line-height: 1.1; letter-spacing: -0.02em;
+          margin: 8px 0 0; font-family: var(--font-display); font-weight: 600;
+          font-size: clamp(24px, 3.4vw, 34px); line-height: 1.1; letter-spacing: -0.02em;
           color: var(--fg);
         }
         .cc-preview-desc {
@@ -250,7 +250,7 @@ export default function UseCaseExplorer() {
         .cc-preview-cta {
           margin-top: 26px; display: inline-flex; align-items: center; gap: 9px;
           padding: 12px 22px; border-radius: 9999px;
-          font-family: var(--font-body); font-weight: 600; font-size: .9375rem;
+          font-family: var(--font-display); font-weight: 600; font-size: 14.5px;
           color: var(--accent-fg); text-decoration: none;
           background: var(--accent); border: 1px solid var(--accent);
           box-shadow: 0 0 0 0 var(--accent-glow);
@@ -273,7 +273,7 @@ export default function UseCaseExplorer() {
         .cc-foot-meta b { color: var(--fg); font-weight: 700; }
         .cc-foot-link {
           display: inline-flex; align-items: center; gap: 8px;
-          font-family: var(--font-body); font-weight: 600; font-size: .875rem;
+          font-family: var(--font-display); font-weight: 600; font-size: 14px;
           color: var(--accent); text-decoration: none;
           transition: gap var(--dur) var(--ease), color var(--dur) var(--ease);
         }

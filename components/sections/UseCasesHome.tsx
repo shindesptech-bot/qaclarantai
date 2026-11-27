@@ -40,8 +40,8 @@ export default function UseCasesHome() {
         .uc2 { background: var(--bg); }
         .uc2-head { max-width: 640px; margin-bottom: 48px; }
         .uc2-h {
-          font-family: var(--font-display); font-weight: 400;
-          font-size: clamp(2rem, 3.5vw, 2.875rem); line-height: 1.06; letter-spacing: -0.03em;
+          font-family: var(--font-display); font-weight: 700;
+          font-size: clamp(30px, 3.6vw, 46px); line-height: 1.06; letter-spacing: -0.03em;
           color: var(--fg); margin: 0 0 20px;
         }
         .uc2-lede { color: var(--fg-muted); font-size: 17px; line-height: 1.7; margin: 0; max-width: 52ch; }
@@ -64,7 +64,7 @@ export default function UseCasesHome() {
           border: 1px solid rgba(0, 200, 245, 0.35);
           transition: background .25s ease, border-color .25s ease;
         }
-        .uc2-title { font-family: var(--font-body); font-weight: 600; font-size: 1.1875rem; color: var(--fg); margin: 0 0 8px; letter-spacing: -0.01em; }
+        .uc2-title { font-family: var(--font-display); font-weight: 700; font-size: 19px; color: var(--fg); margin: 0 0 8px; letter-spacing: -0.01em; }
         .uc2-desc { color: var(--fg-muted); font-size: 14.5px; line-height: 1.6; margin: 0; max-width: 42ch; }
         .uc2-arrow { color: #00C8F5; margin-top: 2px; transition: transform .25s ease; }
         .uc2-item:hover .uc2-arrow { transform: translate(2px, -2px); }

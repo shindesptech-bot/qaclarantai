@@ -18,16 +18,16 @@ export default function Features() {
           margin-bottom: 18px;
         }
         .problem-h {
-          font-family: var(--font-display); font-weight: 400;
-          font-size: clamp(2rem, 3.5vw, 2.875rem); line-height: 1.08;
+          font-family: var(--font-display); font-weight: 700;
+          font-size: clamp(30px, 3.6vw, 46px); line-height: 1.08;
           letter-spacing: -0.03em; color: var(--fg); text-wrap: balance;
         }
         .problem-body { display: flex; flex-direction: column; gap: 22px; padding-top: 6px; }
         .problem-p1 { font-size: 17px; line-height: 1.7; color: var(--fg-muted); text-wrap: pretty; }
         .problem-p2 {
-          font-size: 1.1875rem; line-height: 1.6; color: var(--fg); font-weight: 500;
+          font-size: 19px; line-height: 1.6; color: var(--fg); font-weight: 500;
           padding-top: 22px; border-top: 1px solid var(--border); text-wrap: pretty;
-          font-family: var(--font-body);
+          font-family: var(--font-display);
         }
       `}</style>
 

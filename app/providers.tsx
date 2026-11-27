@@ -7,7 +7,7 @@ export function Providers({ children }: { children: ReactNode }) {
   return (
     <ThemeProvider
       attribute="data-theme"
-      defaultTheme="dark"
+      defaultTheme="light"
       enableSystem={false}
       storageKey="atg-theme"
     >
