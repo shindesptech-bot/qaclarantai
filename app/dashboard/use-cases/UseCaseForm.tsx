@@ -622,7 +622,7 @@ export default function UseCaseForm({ initialData }: Props) {
         }
         .tab-btn {
           padding: 9px 16px;
-          font-family: var(--font-display); font-size: 13px; font-weight: 500;
+          font-family: var(--font-body); font-size: .8125rem; font-weight: 500;
           color: var(--fg-muted); background: transparent; border: none;
           border-bottom: 2px solid transparent; margin-bottom: -1px;
           cursor: pointer; border-radius: 6px 6px 0 0;
@@ -689,7 +689,7 @@ export default function UseCaseForm({ initialData }: Props) {
         .accordion-summary {
           display: flex; align-items: center; gap: 12px;
           padding: 14px 18px; cursor: pointer;
-          font-family: var(--font-display); font-size: 14px; font-weight: 600;
+          font-family: var(--font-body); font-size: .875rem; font-weight: 600;
           color: var(--fg); list-style: none; user-select: none;
           background: var(--bg-elevated);
           transition: background .15s;

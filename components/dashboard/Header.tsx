@@ -56,8 +56,8 @@ export default async function DashboardHeader({ title, description }: HeaderProp
           min-width: 0;
         }
         .dash-header-title {
-          font-size: 1.2rem;
-          font-weight: 700;
+          font-size: 1.375rem;
+          font-weight: 600;
           color: var(--fg);
           margin: 0;
           white-space: nowrap;
@@ -65,7 +65,7 @@ export default async function DashboardHeader({ title, description }: HeaderProp
           text-overflow: ellipsis;
         }
         .dash-header-desc {
-          font-size: 0.82rem;
+          font-size: .8125rem;
           color: var(--fg-muted);
           margin: 2px 0 0;
           white-space: nowrap;
@@ -84,8 +84,8 @@ export default async function DashboardHeader({ title, description }: HeaderProp
           border-radius: 50%;
           background: var(--accent-soft);
           color: var(--accent);
-          font-size: 0.8rem;
-          font-weight: 700;
+          font-size: .8125rem;
+          font-weight: 600;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -97,13 +97,13 @@ export default async function DashboardHeader({ title, description }: HeaderProp
           align-items: flex-end;
         }
         .dash-user-name {
-          font-size: 0.85rem;
+          font-size: .875rem;
           font-weight: 600;
           color: var(--fg);
           white-space: nowrap;
         }
         .dash-user-role {
-          font-size: 0.7rem;
+          font-size: .6875rem;
           color: var(--fg-muted);
           text-transform: uppercase;
           letter-spacing: 0.05em;

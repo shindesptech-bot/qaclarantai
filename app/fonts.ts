@@ -16,7 +16,7 @@ import localFont from 'next/font/local'
 
 export const spaceGrotesk = localFont({
   src: '../public/fonts/SpaceGrotesk-VariableFont_wght.ttf',
-  weight: '300 700', // variable weight axis
+  weight: '300 700',
   display: 'swap',
   variable: '--font-space-grotesk',
   fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
@@ -24,9 +24,17 @@ export const spaceGrotesk = localFont({
 
 export const inter = localFont({
   src: '../public/fonts/Inter-VariableFont_opsz,wght.ttf',
-  weight: '100 900', // variable weight axis
+  weight: '100 900',
   display: 'swap',
   variable: '--font-inter',
+  fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
+})
+
+export const hankenGrotesk = localFont({
+  src: '../public/fonts/HankenGrotesk-var.woff2',
+  weight: '100 900',
+  display: 'swap',
+  variable: '--font-hanken-grotesk',
   fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 })
 
@@ -36,12 +44,4 @@ export const besley = localFont({
   display: 'swap',
   variable: '--font-besley',
   fallback: ['Georgia', 'Times New Roman', 'serif'],
-})
-
-export const hankenGrotesk = localFont({
-  src: '../public/fonts/HankenGrotesk-var.woff2',
-  weight: '100 900',
-  display: 'swap',
-  variable: '--font-hanken-grotesk',
-  fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 })

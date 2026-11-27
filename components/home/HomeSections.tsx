@@ -3,6 +3,7 @@ import type { CSSProperties } from 'react'
 import { prisma } from '@/lib/prisma'
 import { FAQS, QUOTES, type QuoteItem } from '@/lib/data'
 import { CALENDLY_URL, LOGIN_URL } from './links'
+import HomePricing from './HomePricing'
 import { Check, CheckSmall } from './HomeHero'
 
 /* The homepage sections below the hero, in the order of the Clarant design reference.
@@ -11,7 +12,7 @@ import { Check, CheckSmall } from './HomeHero'
 
 const sr = { className: 'sr' } as const
 
-/* ---------- proof strip: the reference index.html's row layout, with the project's own integration logos ---------- */
+/* ---------- connect strip: the integrations marquee under the hero (logos are the brands' own marks) ---------- */
 const CONNECT: { name: string; src: string }[] = [
   { name: 'Microsoft Teams', src: '/assets/home/logos/teams.svg' },
   { name: 'Jira', src: '/assets/home/logos/connect/jira.svg' },
@@ -25,18 +26,23 @@ const CONNECT: { name: string; src: string }[] = [
 ]
 
 export function ProofStrip() {
+  const items = CONNECT.map((t) => (
+    <li key={t.name}>
+      <img src={t.src} alt={t.name} width={22} height={22} loading="lazy" />
+      <span>{t.name}</span>
+    </li>
+  ))
   return (
-    <section className="proof-strip" id="customers" aria-labelledby="customers-h">
-      <h2 id="customers-h">Trusted by <b>business leaders</b> at growing companies</h2>
-      <div className="logos">
-        <div className="logos-track">
-          {[0, 1].map((copy) => (
-            <ul key={copy} className="logos-group" aria-label={copy === 0 ? 'Tools Clarant connects to' : undefined} aria-hidden={copy === 1 || undefined}>
-              {CONNECT.map((t) => (
-                <li key={t.name}><img src={t.src} alt="" loading="lazy" /><span>{t.name}</span></li>
-              ))}
-            </ul>
-          ))}
+    <section className="connect" id="customers" aria-labelledby="connect-h">
+      <div className="connect-head">
+        <h2 id="connect-h" className="connect-title">Connect everything</h2>
+        <p className="connect-note">30+ native connectors. Add your own with the API.</p>
+      </div>
+      <div className="connect-marquee">
+        <div className="connect-track">
+          <ul className="connect-group">{items}</ul>
+          {/* second copy only drives the seamless loop on desktop; screen readers and phones get the first copy */}
+          <ul className="connect-group connect-dup" aria-hidden="true">{items}</ul>
         </div>
       </div>
     </section>
@@ -471,54 +477,13 @@ export async function Proof() {
 /* ---------- pricing: the tiers come from the same list as before (client component for the billing switch) ---------- */
 export function Pricing() {
   return (
-    <section className="sec p-plans" id="pricing" aria-label="Plans">
-      <div className="cells c3 plans">
-        <div>
-          <div><h3 className="h3">Free <span className="tag tag-mute">14-day trial</span></h3><p className="small">Try everything with your own inbox and calendar.</p></div>
-          <div className="price">$0 <small>for 14 days</small><span className="per">Every app and every feature below</span></div>
-          <ul>
-            <li><PlanCheck /><span>One to-do list that updates itself</span></li>
-            <li><PlanCheck /><span>Reminders before anyone has to chase you</span></li>
-            <li><PlanCheck /><span>Meeting prep and follow-ups, written for you</span></li>
-            <li><PlanCheck /><span>Works in Slack, Teams, and the iOS and Android apps</span></li>
-            <li><PlanCheck /><span>Every app included</span></li>
-          </ul>
-          <a className="btn btn-line" href={LOGIN_URL}>Start free trial</a>
-          <p className="fine">Card required to start. Continues as Pro on day 15. <span className="tbd">[Cancel any time.]</span></p>
-        </div>
-        <div className="pick">
-          <div><h3 className="h3">Pro <span className="tag tag-ok">Recommended</span></h3><p className="small">For leaders who run most of their week through Clarant.</p></div>
-          <div className="price">$99 <small>per month</small><span className="per">After your 14-day free trial, for 40,000 credits a month</span></div>
-          <ul>
-            <li><PlanCheck /><span>Everything in Free</span></li>
-            <li><PlanCheck /><span><b>40,000 new credits</b> every month</span></li>
-            <li><PlanCheck /><span>Top up whenever you need more</span></li>
-          </ul>
-          <a className="btn btn-primary" href={LOGIN_URL}>Start free trial</a>
-          <p className="fine">First 14 days free. <a href="#credits">How credits work</a></p>
-        </div>
-        <div>
-          <div><h3 className="h3">Enterprise</h3><p className="small">For the leadership team.</p></div>
-          <div className="price">Custom<span className="per">For your leadership team or the whole company</span></div>
-          <ul>
-            <li><PlanCheck /><span>Everything in Pro, for everyone</span></li>
-            <li><PlanCheck /><span>Leaders see what’s slipping across teams</span></li>
-            <li><PlanCheck /><span>SOC 2 Type II, SSO, SCIM and audit logs</span></li>
-            <li><PlanCheck /><span>Initial setup included</span></li>
-          </ul>
-          <a className="btn btn-line" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a demo</a>
-          <p className="fine">A 20-minute call with <span className="tbd">[our team]</span>.</p>
-        </div>
+    <section className="sec" id="pricing">
+      <div className="sec-head">
+        <h2 className="h2">Pricing for one leader or the whole leadership team.</h2>
+        <p className="lead">Every plan starts with a <span className="tbd">[14-day free trial, no credit card]</span>. <span className="tbd">[Plan names and features to be confirmed]</span></p>
       </div>
+      <HomePricing />
     </section>
-  )
-}
-
-function PlanCheck() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M20 6 9 17l-5-5" />
-    </svg>
   )
 }
 

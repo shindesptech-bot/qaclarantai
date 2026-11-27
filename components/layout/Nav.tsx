@@ -78,8 +78,8 @@ export default function Nav({ basePath = '' }: NavProps) {
         .brand {
           display: inline-flex; align-items: center;
           text-decoration: none; color: var(--fg);
-          font-family: var(--font-display);
-          font-weight: 600; font-size: 26px; letter-spacing: -0.025em;
+          font-family: var(--font-body);
+          font-weight: 600; font-size: 1.25rem; letter-spacing: -0.025em;
           flex-shrink: 0;
         }
         .brand-mark { display: inline-flex; align-items: center; width: 40px; height: 50px; flex-shrink: 0; }
@@ -95,7 +95,7 @@ span.brand-word {
         .nav-links { display: flex; gap: 2px; align-items: center; }
         .nav-link {
           padding: 8px 11px;
-          font-family: var(--font-display); font-size: 13.5px; font-weight: 500;
+          font-family: var(--font-body); font-size: .875rem; font-weight: 500;
           color: var(--fg-muted); text-decoration: none; border-radius: 8px;
           transition: color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
           white-space: nowrap;
@@ -143,9 +143,9 @@ span.brand-word {
           display: flex; align-items: center;
           padding: 16px var(--gutter);
           color: var(--fg);
-          font-size: 1.05rem;
+          font-size: 1.125rem;
           font-weight: 500;
-          font-family: var(--font-display);
+          font-family: var(--font-body);
           text-decoration: none;
           border-bottom: 1px solid var(--border);
           transition: background var(--dur-fast) var(--ease);

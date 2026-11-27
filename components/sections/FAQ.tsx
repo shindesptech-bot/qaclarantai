@@ -49,7 +49,7 @@ export default function FAQ() {
         .faq-q {
           width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px;
           padding: 22px 4px; background: transparent; border: 0; text-align: left;
-          font-family: var(--font-display); font-size: 16.5px; font-weight: 500; letter-spacing: -0.005em;
+          font-family: var(--font-body); font-size: 1.0625rem; font-weight: 500; letter-spacing: -0.005em;
           color: var(--fg); transition: color var(--dur-fast) var(--ease);
         }
         .faq-q:hover { color: var(--accent); }

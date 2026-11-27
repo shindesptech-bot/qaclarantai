@@ -64,18 +64,18 @@ export default async function Testimonials() {
         .quote:hover .quote-stars svg:nth-child(3) { animation-delay: 120ms; }
         .quote:hover .quote-stars svg:nth-child(4) { animation-delay: 180ms; }
         .quote:hover .quote-stars svg:nth-child(5) { animation-delay: 240ms; }
-        .quote-text { font-family: var(--font-display); font-weight: 500; font-size: 18px; line-height: 1.45; letter-spacing: -0.01em; margin: 0; text-wrap: pretty; }
+        .quote-text { font-family: var(--font-body); font-weight: 500; font-size: 1.125rem; line-height: 1.45; letter-spacing: -0.01em; margin: 0; text-wrap: pretty; }
         .quote-by { display: flex; align-items: center; gap: 12px; margin-top: auto; }
         .quote-avatar {
           width: 36px; height: 36px; border-radius: 50%;
           background: var(--accent-soft); color: var(--accent);
           display: inline-flex; align-items: center; justify-content: center;
-          font-family: var(--font-display); font-weight: 700; font-size: 13px;
+          font-family: var(--font-body); font-weight: 700; font-size: .8125rem;
           border: 1px solid color-mix(in oklab, var(--accent) 25%, transparent);
           transition: transform .3s var(--ease), box-shadow .3s;
         }
         .quote:hover .quote-avatar { transform: scale(1.12); box-shadow: 0 6px 16px -6px var(--accent-glow); }
-        .quote-name { display: block; font-family: var(--font-display); font-weight: 600; font-size: 14px; }
+        .quote-name { display: block; font-family: var(--font-body); font-weight: 600; font-size: .875rem; }
         .quote-org  { display: block; color: var(--fg-subtle); font-size: 12.5px; }
         .stats {
           margin-top: 56px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
@@ -91,7 +91,7 @@ export default async function Testimonials() {
         }
         .stat { display: flex; flex-direction: column; gap: 4px; cursor: default; }
         @keyframes statPop { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
-        .stat-n { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.02em; color: var(--accent); transition: color .2s; }
+        .stat-n { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.75rem, 3vw, 2.5rem); letter-spacing: -0.02em; color: var(--accent); transition: color .2s; }
         .stat:hover .stat-n { animation: statPop .4s var(--ease); }
         .stat-l { color: var(--fg-muted); font-size: 13px; }
       `}</style>

@@ -4,10 +4,9 @@ import './globals.css'
 import { Providers } from './providers'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import MetaPixel from '@/components/analytics/MetaPixel'
-import LinkedInInsightTag from '@/components/analytics/LinkedInInsightTag'
 import JsonLd from '@/components/seo/JsonLd'
 import CalendlyPopup from '@/components/integrations/CalendlyPopup'
-import { inter, spaceGrotesk, besley, hankenGrotesk } from './fonts'
+import { inter, spaceGrotesk, hankenGrotesk, besley } from './fonts'
 
 // Site-wide Organization entity. Lives in the root layout so it appears exactly
 // once on every page — do not duplicate it in page components.
@@ -72,7 +71,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${besley.variable} ${hankenGrotesk.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${hankenGrotesk.variable} ${besley.variable}`} suppressHydrationWarning>
       <body>
         <Providers>
           {/* <RobotCursor /> */}
@@ -80,7 +79,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </Providers>
         <GoogleAnalytics />
         <MetaPixel />
-        <LinkedInInsightTag />
         <JsonLd data={organizationSchema} />
         <CalendlyPopup />
       </body>

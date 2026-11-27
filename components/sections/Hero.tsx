@@ -290,7 +290,7 @@ export default function Hero() {
         .hero-copy { min-width: 0; }
         .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-label); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px; }
         .hero-eyebrow-dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--accent); }
-        .hero-title { font-family: var(--font-display); font-size: clamp(40px, 5.4vw, 68px); font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; color: var(--fg); margin-bottom: 24px; text-wrap: balance; }
+        .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5.4vw, 4.5rem); font-weight: 400; line-height: 1.02; letter-spacing: -0.035em; color: var(--fg); margin-bottom: 24px; text-wrap: balance; }
         .hero-title em { font-style: normal; color: var(--accent); }
         .hero-lede { font-size: clamp(16px, 1.4vw, 18px); line-height: 1.65; color: var(--fg-muted); margin-bottom: 36px; max-width: 52ch; text-wrap: pretty; }
         .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -313,7 +313,7 @@ export default function Hero() {
         /* ── Sidebar ── */
         .lt-side { background: #121316; border-right: 1px solid rgba(255,255,255,0.07); padding: 2.4cqw 1.6cqw; display: flex; flex-direction: column; gap: .2cqw; min-width: 0; overflow: hidden; }
         .lt-brand { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.4cqw; padding: 0 .6cqw; }
-        .lt-brand-name { display: flex; align-items: center; gap: .7cqw; font-family: var(--font-display); font-size: 3.68cqw; font-weight: 700; color: #FFFFFF; }
+        .lt-brand-name { display: flex; align-items: center; gap: .7cqw; font-family: var(--font-body); font-size: 3.68cqw; font-weight: 700; color: #FFFFFF; }
         .lt-mark { width: 2.6cqw !important; height: 2.6cqw !important; object-fit: contain; }
         .lt-panelic { width: 1.8cqw; height: 1.8cqw; }
         .lt-navitem { display: flex; align-items: center; gap: 1cqw; padding: .75cqw 1cqw; font-size: 2.08cqw; font-weight: 500; color: #E4E6EA; white-space: nowrap; }
@@ -331,7 +331,7 @@ export default function Hero() {
         .lt-thread { flex: 1; min-height: 0; overflow: hidden; padding: 2.4cqw 4cqw 1.6cqw; display: flex; flex-direction: column; gap: 1.8cqw; }
         .lt-empty { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1cqw; opacity: .9; }
         .lt-empty-mark { width: 4.5cqw !important; height: 4.5cqw !important; object-fit: contain; }
-        .lt-empty-text { font-family: var(--font-display); font-size: 3.2cqw; font-weight: 600; color: #FFFFFF; }
+        .lt-empty-text { font-family: var(--font-body); font-size: 3.2cqw; font-weight: 600; color: #FFFFFF; }
         .lt-user { align-self: flex-end; max-width: 80%; background: #FFFFFF; color: #16171A; border-radius: 1.4cqw; padding: 1.2cqw 1.6cqw; font-size: 2cqw; line-height: 1.55; }
         .lt-thinking { display: flex; align-items: center; gap: .8cqw; font-size: 1.92cqw; color: #9DA3AD; }
         .lt-think-mark { width: 1.8cqw !important; height: 1.8cqw !important; object-fit: contain; }
@@ -370,7 +370,7 @@ export default function Hero() {
         .lt-ghead { display: flex; align-items: center; gap: 1.4cqw; margin-bottom: 2cqw; }
         .lt-gicon { flex: none; width: 4.4cqw; height: 4.4cqw; border-radius: 9999px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; }
         .lt-gicon svg { width: 2cqw; height: 2cqw; }
-        .lt-gtitle { font-family: var(--font-display); font-size: 4.16cqw; font-weight: 600; color: #FFFFFF; line-height: 1.1; }
+        .lt-gtitle { font-family: var(--font-body); font-size: 4.16cqw; font-weight: 600; color: #FFFFFF; line-height: 1.1; }
         .lt-gsub { font-size: 1.84cqw; color: #A9AEB7; margin-top: .3cqw; }
         .lt-gsearch { display: flex; align-items: center; gap: .9cqw; padding: 1cqw 1.4cqw; border-radius: 1cqw; border: 1px solid rgba(255,255,255,0.12); background: #202125; font-size: 1.84cqw; color: #9DA3AD; margin-bottom: 1.8cqw; }
         .lt-gsearch svg { width: 1.3cqw; height: 1.3cqw; flex: none; }
@@ -378,7 +378,7 @@ export default function Hero() {
         .lt-gcard { display: flex; align-items: flex-start; gap: 1.1cqw; padding: 1.3cqw; border-radius: 1.4cqw; background: #202125; border: 1px solid rgba(255,255,255,0.08); transition: border-color .4s; }
         .lt-gcard-logo { flex: none; width: 3.4cqw; height: 3.4cqw; border-radius: .9cqw; background: #FFFFFF; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .lt-gcard-logo > svg { width: 2.1cqw; height: 2.1cqw; }
-        .lt-gcard-letter { font-family: var(--font-display); font-size: 2cqw; font-weight: 700; color: #FFFFFF; }
+        .lt-gcard-letter { font-family: var(--font-body); font-size: 2cqw; font-weight: 700; color: #FFFFFF; }
         .lt-gcard-name { display: flex; align-items: center; gap: .7cqw; font-size: 2cqw; font-weight: 600; color: #FFFFFF; }
         .lt-gcard-chip { font-size: 1.36cqw; font-weight: 600; color: #30B4E6; background: rgba(48,180,230,0.14); padding: .2cqw .6cqw; border-radius: 9999px; }
         .lt-gcard-desc { font-size: 1.6cqw; line-height: 1.45; color: #A9AEB7; margin-top: .3cqw; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -389,7 +389,7 @@ export default function Hero() {
         .lt-gmodal-x { position: absolute; top: 1.6cqw; right: 1.6cqw; width: 1.3cqw; height: 1.3cqw; }
         .lt-gmodal-body { padding: 0 2.6cqw 2.2cqw; margin-top: -2.6cqw; }
         .lt-gmodal-icon { display: flex; width: 5.2cqw; height: 5.2cqw; border-radius: 1.2cqw; background: #1A1B1E; border: 1px solid rgba(255,255,255,0.1); align-items: center; justify-content: center; margin-bottom: 1.4cqw; overflow: hidden; padding: 1.1cqw; }
-        .lt-gmodal-name { font-family: var(--font-display); font-size: 3.36cqw; font-weight: 700; color: #FFFFFF; margin-bottom: .6cqw; }
+        .lt-gmodal-name { font-family: var(--font-body); font-size: 3.36cqw; font-weight: 700; color: #FFFFFF; margin-bottom: .6cqw; }
         .lt-gmodal-desc { font-size: 1.92cqw; line-height: 1.5; color: #C9CDD3; margin-bottom: 1.6cqw; }
         .lt-gmodal-auth { display: flex; gap: .8cqw; font-size: 1.84cqw; }
         .lt-auth-ic { width: 1.3cqw; height: 1.3cqw; flex: none; color: #9DA3AD; margin-top: .15cqw; }
